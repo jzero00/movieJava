@@ -1,5 +1,6 @@
 package Service;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import dao.MovieScheduleDao;
@@ -26,8 +27,9 @@ public class MovieScheduleServiceImpl implements MovieScheduleService {
 
 		// 해당영화를 보여주는 기능
 		movieSchDao.getMoiveScheduleInfo(movieNo);
-		
+
 		
 	}
+
 
 }
