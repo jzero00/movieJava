@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import vo.MovieInfoVO;
 import vo.MovieScheduleVO;
 import vo.ScreenVO;
+import vo.Screen_seatVO;
 import vo.UserVO;
 
 public class Database {
@@ -324,7 +325,29 @@ public class Database {
 		
 		}
 	
-	
-	
+	public ArrayList<Screen_seatVO> screenSeat = new ArrayList<>();
+	{
+		for(int i = 1; i<= 3; i++){	//스크린아이디 반복문 
+			for(int j = 1; j<= 5; j++){ //	
+				for(int k = 1; k <= 3; k++){ // 좌석 id
+					Screen_seatVO screenSeat1 = new Screen_seatVO();
+					screenSeat1.setScreenId(i);		//1상영관, 2상영관, 3상영관
+					screenSeat1.setSeatBook(0);
+					screenSeat1.setSeatid(15*(i-1) + j);
+					/*screenSeat1.setSeatLevel(i);*/ //따로?
+					screenSeat1.setSeatNum(""+k+j);
+					screenSeat1.setSeatPrice(7000);
+					screenSeat.add(screenSeat1);
+				}
+			}
+		
+		
+		}
+		
+
+	}
+	public static void main(String[] args) {
+		String list = 
+	}
 	
 }
